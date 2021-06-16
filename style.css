@@ -408,7 +408,7 @@ p {
 }
 
 .wrapper {
-  margin: auto 15px;
+  margin: auto 0;
 }
 
 .work-detail-img {
@@ -449,6 +449,10 @@ p {
   width: 100%;
   height: 100%;
   background-color: #f7f0e4;
+}
+
+.info .wrapper {
+  margin: 0 15px;
 }
 
 .information {
@@ -565,7 +569,7 @@ path#패스_9994 {
 }
 
 .img-svg object:nth-child(3) {
-  bottom: -40px;
+  bottom: -2em;
   left: -90px;
 }
 
