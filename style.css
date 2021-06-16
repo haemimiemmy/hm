@@ -565,7 +565,7 @@ path#패스_9994 {
 }
 
 .img-svg object:nth-child(3) {
-  top: 17.5em;
+  top: 21em;
   left: -90px;
 }
 
@@ -798,7 +798,7 @@ path#패스_9994 {
 
   .img-svg object:nth-child(3) {
     overflow: visible;
-    bottom: -30px;
+    top: 50em;
     left: -90px;
   }
 }
@@ -834,7 +834,7 @@ path#패스_9994 {
 
   .img-svg object:nth-child(3) {
     transform: scale(1);
-    bottom: -40px;
+    top: 50em;
     left: -70px;
   }
 
@@ -960,7 +960,7 @@ path#패스_9994 {
 
   .img-svg object:nth-child(3) {
     transform: scale(1);
-    bottom: 250px;
+    top: 30.5em;
     left: -70px;
   }
 }
