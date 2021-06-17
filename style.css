@@ -26,11 +26,11 @@ svg#main-svg {
     transform: translateY(0);
   }
   to {
-    transform: translateY(10px);
+    transform: translateY(13px);
   }
 }
 
-circle.light-1 {
+g#light-1 {
   opacity: 1;
   transform: scale(1);
   animation: light 5s infinite;
@@ -38,21 +38,19 @@ circle.light-1 {
   transform-box: fill-box;
 }
 
-circle.light-2,
-circle.light-3,
-circle.light-4 {
-  transform: scale(0.7);
-  opacity: 1;
+g#light-2,
+g#light-3,
+g#light-4 {
   animation: star-light 3000ms infinite alternate;
   transform-origin: center;
   transform-box: fill-box;
 }
 
-circle.light-3 {
+g#light-3 {
   animation-delay: 1s;
 }
 
-circle.light-4 {
+g#light-4 {
   animation-delay: 1500ms;
 }
 
@@ -97,12 +95,10 @@ circle.light-4 {
 
 @keyframes star-light {
   0% {
-    transform: scale(0.7);
-    visibility: visible;
+    opacity: 1;
   }
   80% {
-    transform: scale(0.7);
-    visibility: hidden;
+    opacity: 0.5;
   }
 }
 
@@ -133,6 +129,28 @@ g#cloud-3 {
   }
   to {
     transform: translateX(20px);
+  }
+}
+
+g#star-1,
+g#star-2,
+g#star-3 {
+  animation: rotate 10000ms linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+g#star-2 {
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -286,7 +304,7 @@ p {
 }
 
 .main-img {
-  width: 50vh;
+  width: 100vw;
 }
 
 .main-img object {
@@ -347,7 +365,7 @@ p {
 }
 
 .work-card {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -387,14 +405,16 @@ p {
 
 .work-title {
   font-weight: 600;
-  margin-bottom: 4px;
 }
 
-.work-title,
-.work-date {
+.work-title {
   color: #78561b;
   display: block;
   font-size: 13px;
+}
+
+.work-date {
+  display: none;
 }
 
 /* 🍎🍎🍎🍎🍎🍎 < 3.work-detail > 🍎🍎🍎🍎🍎🍎 */
@@ -512,8 +532,8 @@ p {
 }
 
 .img-svg object:first-child {
-  bottom: 50px;
-  left: -30px;
+  left: -1.5em;
+  bottom: 2.3em;
 }
 
 svg#info-cloud {
@@ -529,44 +549,23 @@ svg#info-cloud {
   }
 }
 
-@keyframes hidden-visible {
-  0 {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.3;
-  }
-}
-
 svg#info-star1,
 svg#info-star2 {
-  animation: up-and-down 2000ms ease-in-out infinite alternate;
+  animation: down-and-up 2000ms ease-in-out infinite alternate;
 }
 
 svg#info-star2 {
-  animation-delay: 1500ms;
-}
-
-path#패스_9994 {
-  animation: hidden-visible 1500ms ease-in-out infinite alternate;
-}
-
-path#패스_9994 {
-  animation: hidden-visible 1500ms ease-in-out infinite alternate;
   animation-delay: 1500ms;
 }
 
 .img-svg object:nth-child(2) {
-  top: -40px;
-  right: -10px;
+  top: -3em;
+  right: -1em;
 }
 
 .img-svg object:nth-child(3) {
-  top: 21em;
-  left: -90px;
+  left: -5em;
+  bottom: 0.5em;
 }
 
 .contact-detail {
@@ -673,6 +672,7 @@ path#패스_9994 {
 
   .work-title {
     font-weight: 600;
+    margin-bottom: 4px;
   }
 
   .work-title::after {
@@ -683,6 +683,7 @@ path#패스_9994 {
 
   .work-title,
   .work-date {
+    color: #78561b;
     display: inline-block;
     font-size: 16px;
   }
@@ -789,17 +790,22 @@ path#패스_9994 {
   }
 
   .img-svg object {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 
   .img-svg object:first-child {
-    bottom: 90px;
+    left: 1em;
+    bottom: 7em;
+  }
+
+  .img-svg object:nth-child(2) {
+    top: -2em;
+    right: 1.5em;
   }
 
   .img-svg object:nth-child(3) {
-    overflow: visible;
     top: 50em;
-    left: -90px;
+    left: -3em;
   }
 }
 
@@ -818,24 +824,6 @@ path#패스_9994 {
     gap: 0 10px;
     align-items: stretch;
     width: 750px;
-  }
-
-  .img-svg object:first-child {
-    transform: scale(1);
-    bottom: 80px;
-    left: -50px;
-  }
-
-  .img-svg object:nth-child(2) {
-    transform: scale(1);
-    top: -40px;
-    right: 0;
-  }
-
-  .img-svg object:nth-child(3) {
-    transform: scale(1);
-    top: 50em;
-    left: -70px;
   }
 
   @keyframes down-and-up {
@@ -928,15 +916,6 @@ path#패스_9994 {
 
   .main-img {
     height: 70vh;
-  }
-
-  .main-img object {
-    display: block;
-    height: 100%;
-  }
-
-  .main-img {
-    height: 70vh;
     width: auto;
   }
 
@@ -948,19 +927,19 @@ path#패스_9994 {
 
   .img-svg object:first-child {
     transform: scale(1);
-    bottom: 360px;
-    left: -50px;
+    left: -2em;
+    bottom: 22em;
   }
 
   .img-svg object:nth-child(2) {
     transform: scale(1);
-    top: -40px;
-    right: 0;
+    top: -3em;
+    right: -1em;
   }
 
   .img-svg object:nth-child(3) {
-    transform: scale(1);
+    transform: scale(1.1);
     top: 30.5em;
-    left: -70px;
+    left: -5em;
   }
 }
