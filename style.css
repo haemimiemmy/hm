@@ -528,16 +528,6 @@ p {
 .img-svg object {
   transform: scale(0.7);
   position: absolute;
-  overflow: visible;
-}
-
-.img-svg object:first-child {
-  left: -1.5em;
-  bottom: 2.3em;
-}
-
-svg#info-cloud {
-  animation: down-and-up 2700ms ease-in-out infinite alternate;
 }
 
 @keyframes down-and-up {
@@ -556,6 +546,15 @@ svg#info-star2 {
 
 svg#info-star2 {
   animation-delay: 1500ms;
+}
+
+svg#info-cloud {
+  animation: down-and-up 2700ms ease-in-out infinite alternate;
+}
+
+.img-svg object:first-child {
+  left: -1.5em;
+  bottom: 2.3em;
 }
 
 .img-svg object:nth-child(2) {
